@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(75, 71, 71);
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0px 12px;
+    font-size: 27px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+nav ul{
+    list-style-type: none;
+}
+
+.gameContainer{
+    /*background-color: wheat;*/
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: 'Times New Roman', Times, serif;
+   /* position: relative;/*for line we change container position relative and line position absolute*/
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.box:hover{
+    background-color: rgb(243, 227, 243);
+}
+.info{
+    font-size: 23px;
+}
+.gameinfo{
+    padding: 5px 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset{
+    margin: 8px 14px;
+    padding: 5px 15px;
+    background-color: rgb(205, 231, 222);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:800px) {
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+
+    .gameinfo{
+        margin-top: 34px;
+    }
+
+    .gameinfo h1{
+        font-size: 2rem;
+    }
+
+    .container{
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+}
+
+
